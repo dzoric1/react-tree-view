@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useMemo } from "react";
 import { Directory } from "./Directory";
 import { File } from "../types/File";
 import { FileIcon } from "../Icons/File";
@@ -12,12 +12,11 @@ export const Tree = ({
     []
   );
 
-  const onItemClicked = useCallback(
-    (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-      event.stopPropagation();
-    },
-    []
-  );
+
+
+  const onItemClicked = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    event.stopPropagation();
+  };
 
   return (
     <ul
